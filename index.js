@@ -60,5 +60,5 @@ app.post('/api/user/profile/:steamID', function (req, res) {
 
 
 app.listen(port, function () {
-    console.log('Example app listening on port: ' + port + "!");
+    console.log('Mocked API is listening on port: ' + port + "!");
 });
