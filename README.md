@@ -1,8 +1,8 @@
 # lekker.games_mocked_api
 
-This server is required to test the lekker.games_frontend
-It serves as a mocked API to handle requests coming from lekker.games_frontend. Just keep it running if you want to test
-lekker.games_frontend.
+This server is required to test the [lekker.games_frontend](https://github.com/DATADEER/lekker.games_frontend)
+It serves as a mocked API to handle requests coming from [lekker.games_frontend](https://github.com/DATADEER/lekker.games_frontend). Just keep it running if you want to test
+[lekker.games_frontend](https://github.com/DATADEER/lekker.games_frontend).
 
 ## Project setup
 ```
