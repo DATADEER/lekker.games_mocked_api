@@ -19,6 +19,15 @@ const {
 const axios = require("axios-observable").Axios;
 const colors = require("colors");
 
+function getEnvironmentPort() {
+  defaultPort = 4000;
+  if (process.env.PORT) {
+    return process.env.PORT;
+  } else {
+    return defaultPort;
+  }
+}
+
 const USER_DATA_JSON = require("./mocked_data/user-data.json");
 const USER_DATA_PRIVATE_JSON = require("./mocked_data/user-data-private.json");
 
@@ -30,7 +39,7 @@ const ALL_VALID_GAMES_JSON = require("./mocked_data/custom-steamid.json");
 
 const USERS_JSON = require("./mocked_data/users.json");
 
-const port = 4000;
+const port = getEnvironmentPort();
 
 app.use(cors()); // Not suited for production usage
 
