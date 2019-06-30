@@ -45,15 +45,15 @@ app.use(cors()); // Not suited for production usage
 
 const jsonParser = bodyParser.json({ type: "application/*+json" });
 
-app.get("/api/user/profile/:steamID/games", function(req, res) {
+app.get("/user/profile/:steamID/games", function(req, res) {
   res.send();
 });
 
-app.get("/api/steam/profile/custom/:steamUsername", function(req, res) {
+app.get("/steam/profile/custom/:steamUsername", function(req, res) {
   res.send(CUSTOM_STEAMID_JSON);
 });
 
-app.get("/api/steam/profile/:steamID", function(req, res) {
+app.get("/steam/profile/:steamID", function(req, res) {
   const steamID = parseInt(req.params.steamID);
   if (steamID === 1) {
     res.send(USER_DATA_PRIVATE_JSON);
@@ -64,7 +64,7 @@ app.get("/api/steam/profile/:steamID", function(req, res) {
   }
 });
 
-app.get("/api/steam/profile/:steamID/games", function(req, res) {
+app.get("/steam/profile/:steamID/games", function(req, res) {
   const steamID = parseInt(req.params.steamID);
   if (steamID === 1) {
     res.send(USER_OWNED_GAMES_PRIVATE_JSON);
@@ -75,11 +75,11 @@ app.get("/api/steam/profile/:steamID/games", function(req, res) {
   }
 });
 
-app.post("/api/user/profile/:steamID/games", function(req, res) {
+app.post("/user/profile/:steamID/games", function(req, res) {
   res.send();
 });
 
-app.post("/api/user/profile/:steamID", function(req, res) {
+app.post("/user/profile/:steamID", function(req, res) {
   res.send();
 });
 
