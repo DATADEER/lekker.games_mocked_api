@@ -45,6 +45,10 @@ app.use(cors()); // Not suited for production usage
 
 const jsonParser = bodyParser.json({ type: "application/*+json" });
 
+app.get("/wakeup", function(req, res) {
+  res.send("API IS AVAILABLE ✅");
+});
+
 app.get("/user/profile/:steamID/games", function(req, res) {
   res.send();
 });
